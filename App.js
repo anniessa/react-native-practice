@@ -1,21 +1,18 @@
 import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import ColorBox from './components/ColorBox';
 
 const App = () => {
   return (
     <SafeAreaView style={styles.safeArea}>
-      <View style={[styles.container, styles.cyan]}>
-        <Text style={styles.text}>Cyan</Text>
+      <View style={styles.container}>
+        <Text>Here are some boxes of different colors.</Text>
       </View>
-      <View style={[styles.container, styles.blue]}>
-        <Text style={styles.text}>Blue</Text>
-      </View>
-      <View style={[styles.container, styles.magenta]}>
-        <Text style={styles.text}>Magenta</Text>
-      </View>
-      <View style={[styles.container, styles.orange]}>
-        <Text style={styles.text}>Orange</Text>
-      </View>
+      <ColorBox colorName="Cyan" hexCode="#2aa198" />
+      <ColorBox colorName="Blue" hexCode="#268bd2" />
+      <ColorBox colorName="Magenta" hexCode="#d33682" />
+      <ColorBox colorName="Orange" hexCode="#cb4b16" />
+
     </SafeAreaView>
   );
 };
@@ -24,18 +21,6 @@ const styles = StyleSheet.create({
   text: {
     fontWeight: 'bold',
     color: 'white',
-  },
-  cyan: {
-    backgroundColor: '#2aa198',
-  },
-  blue: {
-    backgroundColor: '#268bd2',
-  },
-  magenta: {
-    backgroundColor: '#d33682',
-  },
-  orange: {
-    backgroundColor: '#cb4b16',
   },
   container: {
     alignItems: 'center',
