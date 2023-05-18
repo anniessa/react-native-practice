@@ -10,7 +10,6 @@ const ColorBox = (props) => {
   const textStyle = {
     color:
       // algorithm that takes the hex code and compares it to white
-      // eslint-disable-next-line prettier/prettier
       //  if the RGB value are in the end 10% of the white spectrum,
       // you can adjust for that color scheme
       parseInt(props.hexCode.replace('#', ''), 16) > 0xffffff / 1.1
