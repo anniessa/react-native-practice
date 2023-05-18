@@ -11,7 +11,7 @@ const ColorBox = (props) => {
     color:
       // algorithm that takes the hex code and compares it to white
       // eslint-disable-next-line prettier/prettier
-    //  if the RGB value are in the end 10% of the white spectrum,
+      //  if the RGB value are in the end 10% of the white spectrum,
       // you can adjust for that color scheme
       parseInt(props.hexCode.replace('#', ''), 16) > 0xffffff / 1.1
         ? 'black'
@@ -34,6 +34,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.3,
+    shadowRadius: 1,
   },
   text: {
     fontWeight: 'bold',
